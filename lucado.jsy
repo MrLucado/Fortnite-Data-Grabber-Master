@@ -1,0 +1,31 @@
+const { get } = require('request-promise');
+const axios = require('axios');
+
+(async () => {
+  var AES = await get('https://fnbot.shop/api/aes');
+  console.log('\x1b[35m%s\x1b[0m', '[AES Detection]', `Current AES Key:  0x${AES}`)
+})();
+
+(async () => {
+  var STATUS = await axios.get('https://benbotfn.tk/api/v1/status');
+  console.log('\x1b[35m%s\x1b[0m', '[Pak Data]', `Total Pak Count:  ${STATUS.data.totalPakCount}`)
+})();
+
+(async () => {
+  var STATUS = await axios.get('https://benbotfn.tk/api/v1/status');
+  console.log('\x1b[35m%s\x1b[0m', '[Pak Data]', `Dynamic Pak Count:  ${STATUS.data.dynamicPakCount}`)
+})();
+
+(async () => {
+    var STATUS = await axios.get('https://benbotfn.tk/api/v1/status');
+    console.log('\x1b[35m%s\x1b[0m', '[Build Detection]', `Current Build Version:  ${STATUS.data.currentFortniteVersionNumber}`)
+})();
+
+(async () => {
+  var STATUS = await axios.get('https://benbotfn.tk/api/v1/status');
+  console.log('\x1b[35m%s\x1b[0m', '[Version Detection]', `Current Fortnite Version:  ${STATUS.data.currentFortniteVersion}`) 
+})();
+
+console.log('\x1b[35m%s\x1b[0m', '[Creator]', '- Twitter: @JacobLucado') 
+console.log('\x1b[35m%s\x1b[0m', '[Creator Code]', '- Jacob-Lucado') 
+console.log('\x1b[35m%s\x1b[0m', '-------------------------------------------------------------------------------------------------------------' ) 
